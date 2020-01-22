@@ -2,7 +2,7 @@ const express = require('express');
 const router = express.Router();
 const fetch = require("node-fetch");
 require('dotenv').config();
-const CONTACTS_API_URL = process.env.CONTACTS_API_URL || 'http://contacts-api/contacts';
+const CONTACTS_API_URL = process.env.CONTACTS_API_URL || 'http://contacts-api:8080/contacts';
 
 router.get('/', async function (req,res) {
 
