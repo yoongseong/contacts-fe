@@ -11,13 +11,13 @@ router.get('/', async function (req,res) {
     let contacts = await data.json();
     console.log(contacts);
     if (Array.isArray(contacts) && contacts.length)
-      res.render('index', {contacts: contacts, error: null, title: 'Contact List'});
+      res.render('index', {contacts: contacts, error: null, title: 'NTT AP Innovation CoE Contact List'});
     else
-      res.render('index', {contacts: null, error: null, title: 'Contact List'});
+      res.render('index', {contacts: null, error: null, title: 'NTT AP Innovation CoE Contact List'});
   }
   catch (err) {
     console.log(err);
-    res.render('index', {contacts: null, title: 'Contact List', error: 'Error: Unable to fetch data from contacts-api!'});
+    res.render('index', {contacts: null, title: 'NTT AP Innovation CoE Contact List', error: 'Error: Unable to fetch data from contacts-api!'});
   }
 
 });
